@@ -36,4 +36,4 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "my-app/dist/my-app/browser/*"
           target: "/var/www/html/examen"
-          strip_components: 3
+          strip_components: 4
