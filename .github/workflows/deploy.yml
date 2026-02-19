@@ -19,10 +19,14 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          cd my-app
+          npm ci
 
       - name: Build Angular (production)
-        run: npm run build -- --configuration production
+        run: |
+          cd my-app
+          npm run build -- --configuration production
 
       - name: Deploy to VPS via SSH
         uses: appleboy/scp-action@v0.1.4
